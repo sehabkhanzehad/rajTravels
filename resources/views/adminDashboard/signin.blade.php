@@ -67,7 +67,7 @@
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Username or email</label>
-                                        <input type="text" name="email" class="form-control"
+                                        <input type="text" name="email" autofocus class="form-control"
                                             id="exampleInputEmail1" value="{{ old('email') }}"
                                             placeholder="Username or email">
                                         @error('email')

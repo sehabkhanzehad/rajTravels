@@ -49,14 +49,40 @@
                         </a>
                     </li>
 
-                    <li class="nav-item nav-category" title="msrajtravels.com">Website</li>
+                    <li class="nav-item nav-category">Customize Website</li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">
-                            <i class="link-icon" data-feather="image"></i>
-                            <span class="link-title">Change Logo</span>
+                        <a class="nav-link" data-toggle="collapse" href="#homes" role="button" aria-expanded="false"
+                            aria-controls="homes">
+                            <i class="link-icon" data-feather="home"></i>
+                            <span class="link-title">Home</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="homes">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="{{ route("websiteCustomize.logo") }}" class="nav-link">Logo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../../pages/email/read.html" class="nav-link">Read</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../../pages/email/compose.html" class="nav-link">Compose</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../pages/apps/chat.html" class="nav-link">
+                            <i class="link-icon" data-feather="message-square"></i>
+                            <span class="link-title">Chat</span>
                         </a>
                     </li>
-
+                    <li class="nav-item">
+                        <a href="../../pages/apps/calendar.html" class="nav-link">
+                            <i class="link-icon" data-feather="calendar"></i>
+                            <span class="link-title">Calendar</span>
+                        </a>
+                    </li>
 
 
                     {{-- <li class="nav-item nav-category">web apps</li>
@@ -92,8 +118,8 @@
                             <i class="link-icon" data-feather="calendar"></i>
                             <span class="link-title">Calendar</span>
                         </a>
-                    </li>
-                     --}}
+                    </li> --}}
+
 
                     {{-- <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#uiComponents" role="button"
@@ -397,7 +423,8 @@
                         </label>
                     </div>
                 </div>
-                <div class="theme-wrapper">
+
+                {{-- <div class="theme-wrapper">
                     <h6 class="text-muted mb-2">Light Theme:</h6>
                     <a class="theme-item active" href="../../../demo_1/dashboard-one.html">
                         <img src="{{ asset('assets') }}/adminDashboard/images/screenshots/light.jpg"
@@ -407,7 +434,8 @@
                     <a class="theme-item" href="../../../demo_2/dashboard-one.html">
                         <img src="{{ asset('assets') }}/adminDashboard/images/screenshots/dark.jpg" alt="light theme">
                     </a>
-                </div>
+                </div> --}}
+
             </div>
         </nav>
         <!-- partial -->
@@ -440,18 +468,21 @@
                             <div class="dropdown-menu" aria-labelledby="languageDropdown">
                                 <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-us"
                                         title="us" id="us"></i> <span class="ml-1"> English </span></a>
-                                <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-fr"
-                                        title="fr" id="fr"></i> <span class="ml-1"> French </span></a>
-                                <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-de"
+
+                                <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-bd"
+                                        title="fr" id="fr"></i> <span class="ml-1"> Bangla </span></a>
+
+                                {{-- <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-de"
                                         title="de" id="de"></i> <span class="ml-1"> German </span></a>
                                 <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-pt"
                                         title="pt" id="pt"></i> <span class="ml-1"> Portuguese
                                     </span></a>
                                 <a href="javascript:;" class="dropdown-item py-2"><i class="flag-icon flag-icon-es"
-                                        title="es" id="es"></i> <span class="ml-1"> Spanish </span></a>
+                                        title="es" id="es"></i> <span class="ml-1"> Spanish </span></a> --}}
                             </div>
                         </li>
-                        <li class="nav-item dropdown nav-apps">
+
+                        {{-- <li class="nav-item dropdown nav-apps">
                             <a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i data-feather="grid"></i>
@@ -485,13 +516,15 @@
                                     <a href="javascript:;">View all</a>
                                 </div>
                             </div>
-                        </li>
+                        </li> --}}
+
                         <li class="nav-item dropdown nav-messages">
-                            <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="" id="messageDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i data-feather="mail"></i>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="messageDropdown">
+
+                            {{-- <div class="dropdown-menu" aria-labelledby="messageDropdown">
                                 <div class="dropdown-header d-flex align-items-center justify-content-between">
                                     <p class="mb-0 font-weight-medium">9 New Messages</p>
                                     <a href="javascript:;" class="text-muted">Clear all</a>
@@ -561,8 +594,10 @@
                                 <div class="dropdown-footer d-flex align-items-center justify-content-center">
                                     <a href="javascript:;">View all</a>
                                 </div>
-                            </div>
+                            </div> --}}
                         </li>
+
+
                         <li class="nav-item dropdown nav-notifications">
                             <a class="nav-link dropdown-toggle" href="#" id="notificationDropdown"
                                 role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -573,20 +608,21 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="notificationDropdown">
                                 <div class="dropdown-header d-flex align-items-center justify-content-between">
-                                    <p class="mb-0 font-weight-medium">6 New Notifications</p>
+                                    <p class="mb-0 font-weight-medium">3 New Notifications</p>
                                     <a href="javascript:;" class="text-muted">Clear all</a>
                                 </div>
                                 <div class="dropdown-body">
+
                                     <a href="javascript:;" class="dropdown-item">
                                         <div class="icon">
                                             <i data-feather="user-plus"></i>
                                         </div>
                                         <div class="content">
-                                            <p>New customer registered</p>
-                                            <p class="sub-text text-muted">2 sec ago</p>
+                                            <p>New Haji Registered</p>
+                                            <p class="sub-text text-muted">2 min ago</p>
                                         </div>
                                     </a>
-                                    <a href="javascript:;" class="dropdown-item">
+                                    {{-- <a href="javascript:;" class="dropdown-item">
                                         <div class="icon">
                                             <i data-feather="gift"></i>
                                         </div>
@@ -594,7 +630,8 @@
                                             <p>New Order Recieved</p>
                                             <p class="sub-text text-muted">30 min ago</p>
                                         </div>
-                                    </a>
+                                    </a> --}}
+
                                     <a href="javascript:;" class="dropdown-item">
                                         <div class="icon">
                                             <i data-feather="alert-circle"></i>
@@ -604,7 +641,8 @@
                                             <p class="sub-text text-muted">1 hrs ago</p>
                                         </div>
                                     </a>
-                                    <a href="javascript:;" class="dropdown-item">
+
+                                    {{-- <a href="javascript:;" class="dropdown-item">
                                         <div class="icon">
                                             <i data-feather="layers"></i>
                                         </div>
@@ -612,7 +650,8 @@
                                             <p>Apps are ready for update</p>
                                             <p class="sub-text text-muted">5 hrs ago</p>
                                         </div>
-                                    </a>
+                                    </a> --}}
+
                                     <a href="javascript:;" class="dropdown-item">
                                         <div class="icon">
                                             <i data-feather="download"></i>
@@ -631,12 +670,20 @@
                         <li class="nav-item dropdown nav-profile">
                             <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="https://via.placeholder.com/30x30" alt="profile">
+                                @if(Auth::guard('admin')->user()->picture == null)
+                                <img src="https://via.placeholder.com/30x30" alt="Profile">
+                                @else
+                                <img src="{{ asset("uploads/dashboard/admin/profile") }}/{{ Auth::guard('admin')->user()->picture }}" alt="Profile">
+                                @endif
                             </a>
                             <div class="dropdown-menu" aria-labelledby="profileDropdown">
                                 <div class="dropdown-header d-flex flex-column align-items-center">
                                     <div class="figure mb-3">
-                                        <img src="https://via.placeholder.com/80x80" alt="">
+                                        @if(Auth::guard('admin')->user()->picture == null)
+                                        <img src="https://via.placeholder.com/80x80" alt="Profile">
+                                        @else
+                                        <img src="{{ asset("uploads/dashboard/admin/profile") }}/{{ Auth::guard('admin')->user()->picture }}" alt="Profile">
+                                        @endif
                                     </div>
                                     <div class="info text-center">
                                         <p class="name font-weight-bold mb-0">{{ Auth::guard('admin')->user()->name }}</p>

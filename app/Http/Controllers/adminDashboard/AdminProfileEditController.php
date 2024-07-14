@@ -41,13 +41,13 @@ class AdminProfileEditController extends Controller
         //        'name' => $requrest->name,
         //        'image' => $fileName,
         //     ]);
-        //     return back()->with("done", "Profile Updated!");
+        //     return back()->with("done", "Profile Updated!");`
 
         if (Auth::guard("admin")->user()->picture != null) {
             unlink(public_path('uploads/dashboard/admin/profile/' . Auth::guard("admin")->user()->picture));
 
             $picture = $request->file("picture");
-            $pictureName = Auth::guard("admin")->user()->username . "." . $picture->extension();
+            $pictureName = Auth::guard("admin")->user()->username . "." . $picture->getClientOriginalExtension();
 
             $picture->move(public_path('uploads/dashboard/admin/profile'), $pictureName);
 
@@ -58,9 +58,13 @@ class AdminProfileEditController extends Controller
             return back()->with("success", "Updated successfully.");
         } else {
             $picture = $request->file("picture");
-            $pictureName = Auth::guard("admin")->user()->username . "." . $picture->extension();
+            $pictureName = Auth::guard("admin")->user()->username . "." . $picture->getClientOriginalExtension();
 
             $picture->move(public_path('uploads/dashboard/admin/profile'), $pictureName);
+
+            Admin::where("id", Auth::guard("admin")->user()->id)->update([
+                "picture" => $pictureName,
+            ]);
 
             return back()->with("success", "Updated successfully.");
         }

@@ -56,12 +56,20 @@
 
                         <div class="form-group">
                             <label for="exampleInputUsername1">Picture</label>
-                            <input type="file" name="picture" class="form-control" autocomplete="off" placeholder="Name">
+                            <input type="file" name="picture"
+                                onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])"
+                                class="form-control" autocomplete="off" placeholder="Name">
                             @error('picture')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
-                        </div>
 
+                            <div class="my-3">
+                                <img src="{{ asset('uploads/dashboard/admin/profile') }}/{{ Auth::guard('admin')->user()->picture }}"
+                                    id="blah" width="100" alt="Profile">
+
+                                {{-- <img src="{{ asset('uploads/dashboard/admin/profile/' . Auth::guard('admin')->user()->picture) }}" id="blah" width="100" alt="Profile"> --}}
+                            </div>
+                        </div>
                         <button type="submit" class="btn btn-primary mr-2">Update</button>
                     </form>
                 </div>
