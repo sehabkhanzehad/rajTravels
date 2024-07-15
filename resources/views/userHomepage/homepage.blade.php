@@ -53,9 +53,8 @@
 
             <a href="{{ route("user.homepage") }}" class="logo d-flex align-items-center me-auto me-xl-0">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <img src="{{ asset('assets') }}/userHomepage/img/apple-touch-icon.png" alt="">
-                <h1><span style="color:red;">RAJ</span> TRAVELS</h1>
-                <span>.</span>
+                <img height="35" width="35" src="{{ asset('uploads/dashboard/website/home/logo/'.$logo->logo) }}" alt="">
+                <h1>M/S <span style="color:red;">RAJ</span> TRAVELS</h1>
                 {{-- <div>
                     <h1><span style="color:red;">RAJ</span> TRAVELS<span>.</span></h1>
 

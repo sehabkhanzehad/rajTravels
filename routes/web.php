@@ -66,6 +66,8 @@ Route::prefix('admin')->group(function () {
 Route::middleware(["admin"])->group(function () {
     Route::prefix("website/customize")->group(function () {
         Route::get("/logo", [WebsiteHomeController::class, "logo"])->name("websiteCustomize.logo");
+        Route::post("/logo", [WebsiteHomeController::class, "logoSubmit"])->name("websiteCustomize.logo.submit");
+        Route::get("/logo/status/{id}", [WebsiteHomeController::class,"logoStatus"])->name("websiteCustomize.logo.status");
+        Route::get("/logo/delete/{id}", [WebsiteHomeController::class,"logoDelete"])->name("websiteCustomize.logo.delete");
     });
 });
-    
