@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\adminDashboard\AdminDashboardController;
-use App\Http\Controllers\adminDashboard\AdminProfileEditController;
-use App\Http\Controllers\adminDashboard\AdminSignInController;
-use App\Http\Controllers\adminDashboard\AdminSignOutController;
-use App\Http\Controllers\adminDashboard\websiteCustomize\WebsiteHomeController;
+use App\Http\Controllers\adminDashboard\admin\AdminDashboardController;
+use App\Http\Controllers\adminDashboard\admin\AdminProfileEditController;
+use App\Http\Controllers\adminDashboard\admin\AdminSignInController;
+use App\Http\Controllers\adminDashboard\admin\AdminSignOutController;
+use App\Http\Controllers\adminDashboard\websiteCustomize\home\BannerController;
+use App\Http\Controllers\adminDashboard\websiteCustomize\home\LogoController;
 use App\Http\Controllers\userHomepage\HomepageControoller;
 use App\Models\Admin;
 use Illuminate\Http\Request;
@@ -65,9 +66,38 @@ Route::prefix('admin')->group(function () {
 // Website customize
 Route::middleware(["admin"])->group(function () {
     Route::prefix("website/customize")->group(function () {
-        Route::get("/logo", [WebsiteHomeController::class, "logo"])->name("websiteCustomize.logo");
-        Route::post("/logo", [WebsiteHomeController::class, "logoSubmit"])->name("websiteCustomize.logo.submit");
-        Route::get("/logo/status/{id}", [WebsiteHomeController::class,"logoStatus"])->name("websiteCustomize.logo.status");
-        Route::get("/logo/delete/{id}", [WebsiteHomeController::class,"logoDelete"])->name("websiteCustomize.logo.delete");
+        Route::get("/logo", [LogoController::class, "logo"])->name("websiteCustomize.logo");
+        Route::post("/logo", [LogoController::class, "logoSubmit"])->name("websiteCustomize.logo.submit");
+        Route::get("/logo/status/{id}", [LogoController::class,"logoStatus"])->name("websiteCustomize.logo.status");
+        Route::get("/logo/delete/{id}", [LogoController::class,"logoDelete"])->name("websiteCustomize.logo.delete");
+
+        // use resource controller
+        Route::resource('/banners', BannerController::class);
+        // Route::get('banners', [BannerController::class, 'index'])->name('banners.index');
+
+
+
     });
 });
+
+
+
+Route::domain('accounts.msrajtravels.com')->group(function () {
+    Route::get('/', function () {
+        return 'This is the admin homepage';
+    });
+
+    Route::get('/users', function () {
+        return 'List of users';
+    });
+});
+
+// Route::domain('blog.example.com')->group(function () {
+//     Route::get('/', function () {
+//         return 'This is the blog homepage';
+//     });
+
+//     Route::get('/posts', function () {
+//         return 'List of posts';
+//     });
+// });

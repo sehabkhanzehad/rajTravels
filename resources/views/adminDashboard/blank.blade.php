@@ -63,7 +63,7 @@
                                     <a href="{{ route("websiteCustomize.logo") }}" class="nav-link">Logo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../../pages/email/read.html" class="nav-link">Read</a>
+                                    <a href="{{ route("banners.index") }}" class="nav-link">Banner</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="../../pages/email/compose.html" class="nav-link">Compose</a>

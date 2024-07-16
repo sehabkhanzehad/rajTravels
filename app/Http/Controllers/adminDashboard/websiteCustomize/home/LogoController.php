@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\adminDashboard\websiteCustomize;
+namespace App\Http\Controllers\adminDashboard\websiteCustomize\home;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class WebsiteHomeController extends Controller
+class LogoController extends Controller
 {
     public function logo()
     {
         $allLogo = DB::table("website_logos")->get();
         return view(
-            "adminDashboard.websiteCustomize.logo",
+            "adminDashboard.websiteCustomize.home.logo",
             [
                 "allLogo" => $allLogo
             ]
