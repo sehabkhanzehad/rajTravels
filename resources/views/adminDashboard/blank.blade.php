@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,7 @@
     <link rel="stylesheet" href="{{ asset('assets') }}/adminDashboard/css/demo_1/style.css">
     <!-- End layout styles -->
 
-    <link rel="shortcut icon" href="{{ asset('assets') }}/adminDashboard/images/favicon.png">
+    <link rel="shortcut icon" href="{{ asset('assets') }}/adminDashboard/images/favicon.ico">
 
     @yield('head')
 </head>
@@ -48,6 +49,26 @@
                             <span class="link-title">Dashboard</span>
                         </a>
                     </li>
+                    <li class="nav-item nav-category">Work</li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#pilgrims" role="button" aria-expanded="false"
+                            aria-controls="pilgrims">
+                            <i class="link-icon" data-feather="users"></i>
+                            <span class="link-title">Pilgrims</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="pilgrims">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="{{ route("pilgrims") }}" class="nav-link">All Pilgrims</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">2024</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
 
                     <li class="nav-item nav-category">Customize Website</li>
                     <li class="nav-item">
@@ -63,26 +84,95 @@
                                     <a href="{{ route("websiteCustomize.logo") }}" class="nav-link">Logo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route("banners.index") }}" class="nav-link">Banner</a>
+                                    <a href="{{ route("banner.index") }}" class="nav-link">Banner</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#aboutus" role="button" aria-expanded="false"
+                            aria-controls="aboutus">
+                            <i class="link-icon" data-feather="user"></i>
+                            <span class="link-title">About Us</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="aboutus">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="{{ route("aboutus.index") }}" class="nav-link">About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../../pages/email/compose.html" class="nav-link">Compose</a>
+                                    <a href="{{ route("card.index") }}" class="nav-link">Cards</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="../../pages/apps/chat.html" class="nav-link">
-                            <i class="link-icon" data-feather="message-square"></i>
-                            <span class="link-title">Chat</span>
+                        <a class="nav-link" data-toggle="collapse" href="#stats" role="button" aria-expanded="false"
+                            aria-controls="stats">
+                            <i class="link-icon" data-feather="layout"></i>
+                            <span class="link-title">Stats</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
                         </a>
+                        <div class="collapse" id="stats">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="{{ route("stats.index") }}" class="nav-link">Baskgorund & Stats</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a href="../../pages/apps/calendar.html" class="nav-link">
-                            <i class="link-icon" data-feather="calendar"></i>
-                            <span class="link-title">Calendar</span>
+                        <a class="nav-link" data-toggle="collapse" href="#service" role="button" aria-expanded="false"
+                            aria-controls="service">
+                            <i class="link-icon" data-feather="check-square"></i>
+                            <span class="link-title">Service</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
                         </a>
+                        <div class="collapse" id="service">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="{{ route("service.index") }}" class="nav-link">Service</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#features" role="button" aria-expanded="false"
+                            aria-controls="features">
+                            <i class="link-icon" data-feather="hash"></i>
+                            <span class="link-title">Features</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="features">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="{{ route("feature1.index") }}" class="nav-link">Feature 1</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#team" role="button" aria-expanded="false"
+                            aria-controls="team">
+                            <i class="link-icon" data-feather="users"></i>
+                            <span class="link-title">Team</span>
+                            <i class="link-arrow" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="team">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Team</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
 
 
                     {{-- <li class="nav-item nav-category">web apps</li>
@@ -729,11 +819,12 @@
                 @yield('content')
             </div>
 
+
             <!-- partial:../../partials/_footer.html -->
             <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between">
-                <p class="text-muted text-center text-md-left">Copyright © 2021 <a href="https://www.nobleui.com"
-                        target="_blank">NobleUI</a>. All rights reserved</p>
-                <p class="text-muted text-center text-md-left mb-0 d-none d-md-block">Handcrafted With <i
+                <p class="text-muted text-center text-md-left">The entirety of this site is protected by copyright © 2024. <a href="https://msrajtravels.com"
+                        target="_blank">RAJ TRAVLES</a></p>
+                <p class="text-muted text-center text-md-left mb-0 d-none d-md-block">Developed by <a target="_blank" href="https://sehabkhanzehad.dev"><strong>Sk Zehad</strong></a><i
                         class="mb-1 text-primary ml-1 icon-small" data-feather="heart"></i></p>
             </footer>
             <!-- partial -->

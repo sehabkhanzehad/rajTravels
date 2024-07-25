@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{ asset('assets') }}/adminDashboard/css/demo_1/style.css">
     <!-- End layout styles -->
 
-    <link rel="shortcut icon" href="{{ asset('assets') }}/adminDashboard/images/favicon.png" />
+    <link rel="shortcut icon" href="{{ asset('assets') }}/adminDashboard/images/favicon.ico" />
 
     <style>
         .auth-page {

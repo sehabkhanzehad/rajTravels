@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('website_logos', function (Blueprint $table) {
             $table->id();
             $table->string('logo');
-            $table->enum('status', ['active', 'inactive'])->default('active');
+            $table->enum('status', ['active', 'inactive'])->default('inactive');
             $table->timestamps();
         });
     }

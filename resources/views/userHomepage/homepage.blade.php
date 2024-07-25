@@ -10,7 +10,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('assets') }}/userHomepage/img/favicon.png" rel="icon">
+    <link href="{{ asset('assets') }}/userHomepage/img/favicon.ico" rel="icon">
     <link href="{{ asset('assets') }}/userHomepage/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Fonts -->
@@ -38,11 +38,11 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 
-  <style>
-   .nav-link {
-      cursor: pointer;
-    }
-  </style>
+    <style>
+        .nav-link {
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
@@ -51,10 +51,11 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
         <div class="container-fluid d-flex align-items-center justify-content-between">
 
-            <a href="{{ route("user.homepage") }}" class="logo d-flex align-items-center me-auto me-xl-0">
+            <a href="{{ route('user.homepage') }}" class="logo d-flex align-items-center me-auto me-xl-0">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <img height="35" width="35" src="{{ asset('uploads/dashboard/website/home/logo/'.$logo->logo) }}" alt="">
-                <h1>M/S <span style="color:red;">RAJ</span> TRAVELS</h1>
+                <img height="35" width="35"
+                    src="{{ asset('uploads/dashboard/website/home/logo/' . $logo->logo) }}" alt="">
+                <h1><span style="color:#e84545;">RAJ</span> TRAVELS</h1>
                 {{-- <div>
                     <h1><span style="color:red;">RAJ</span> TRAVELS<span>.</span></h1>
 
@@ -65,12 +66,12 @@
             <!-- Nav Menu -->
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="{{ route("user.homepage") }}" class="active">Home</a></li>
+                    <li><a href="{{ route('user.homepage') }}" class="active">Home</a></li>
                     <li><a class="nav-link" data-target="#about">About</a></li>
                     <li><a class="nav-link" data-target="#services">Services</a></li>
                     <li><a class="nav-link" data-target="#portfolio">Portfolio</a></li>
                     <li><a class="nav-link" data-target="#team">Team</a></li>
-                    <li><a class="nav-link" data-target="#recent-posts">Blog</a></li>
+                    {{-- <li><a class="nav-link" data-target="#recent-posts">Blog</a></li> --}}
                     {{-- <li class="dropdown has-dropdown"><a href="#"><span>Dropdown</span> <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul class="dd-box-shadow">
@@ -96,7 +97,7 @@
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav><!-- End Nav Menu -->
 
-            <a class="btn-getstarted" target="_blank" href="{{ route("admin.signin") }}">Sign in</a>
+            <a class="btn-getstarted" href=""><strong>Booking Now</strong></a>
 
 
         </div>
@@ -107,14 +108,18 @@
         <!-- Hero Section - Home Page -->
         <section id="hero" class="hero">
 
-            <img src="{{ asset('assets') }}/userHomepage/img/banner3.jpg" alt="" data-aos="fade-in">
+            <img src="{{ asset('uploads') }}/dashboard/website/home/banner/{{ $banner->banner }}" alt=""
+                data-aos="fade-in">
 
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10">
-                        <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Raj Travels</h2>
-                        {{-- <p data-aos="fade-up" data-aos-delay="200">We are team of talented designers making websites
-                            with Bootstrap</p> --}}
+                        <h2 data-aos="fade-up" data-aos-delay="100">Welcome to</h2>
+                        <h2 data-aos="fade-up" data-aos-delay="100">Best Hajj and Umrah Travel Agency</h2>
+                        <br>
+                        <h2 data-aos="fade-up" data-aos-delay="100"><span style="color:;">M/S RAJ TRAVELS</span> <span
+                                style="color: ; font-weight: bold; font-size: 20px">HL: 0935</span></h2>
+                        {{-- <p data-aos="fade-up" data-aos-delay="200">Hajj Licence: 0935</p> --}}
                     </div>
                     <div class="col-lg-5">
                         <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
@@ -135,27 +140,33 @@
                 <div class="row gy-4">
 
                     <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets') }}/userHomepage/img/clients/bdGov.png" class="img-fluid" alt="">
+                        <img src="{{ asset('assets') }}/userHomepage/img/clients/bdGov.png" class="img-fluid"
+                            alt="">
                     </div><!-- End Client Item -->
 
                     <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets') }}/userHomepage/img/clients/atab.jpg" class="img-fluid" alt="">
+                        <img src="{{ asset('assets') }}/userHomepage/img/clients/atab.jpg" class="img-fluid"
+                            alt="">
                     </div><!-- End Client Item -->
 
                     <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets') }}/userHomepage/img/clients/bdBank.png" class="img-fluid" alt="">
+                        <img src="{{ asset('assets') }}/userHomepage/img/clients/bdBank.png" class="img-fluid"
+                            alt="">
                     </div><!-- End Client Item -->
 
                     <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets') }}/userHomepage/img/clients/rupali.png" class="img-fluid" alt="">
+                        <img src="{{ asset('assets') }}/userHomepage/img/clients/rupali.png" class="img-fluid"
+                            alt="">
                     </div><!-- End Client Item -->
 
                     <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets') }}/userHomepage/img/clients/iata.png" class="img-fluid" alt="">
+                        <img src="{{ asset('assets') }}/userHomepage/img/clients/iata.png" class="img-fluid"
+                            alt="">
                     </div><!-- End Client Item -->
 
                     <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets') }}/userHomepage/img/clients/haab.jpg" class="img-fluid" alt="">
+                        <img src="{{ asset('assets') }}/userHomepage/img/clients/haab.jpg" class="img-fluid"
+                            alt="">
                     </div><!-- End Client Item -->
                 </div>
 
@@ -171,52 +182,25 @@
 
                     <div class="col-xl-5 content">
                         <h3>About Us</h3>
-                        <h2>Ducimus rerum libero reprehenderit cumque</h2>
-                        <p>Ipsa sint sit. Quis ducimus tempore dolores impedit et dolor cumque alias maxime. Enim
-                            reiciendis minus et rerum hic non. Dicta quas cum quia maiores iure. Quidem nulla qui
-                            assumenda incidunt voluptatem tempora deleniti soluta.</p>
-                        <a href="#" class="read-more"><span>Read More</span><i
-                                class="bi bi-arrow-right"></i></a>
+                        <h2>{{ $aboutUs->title }}</h2>
+                        <p style="text-align: justify">{{ $aboutUs->description }}</p>
+                        {{-- <a href="" class="read-more"><span>Read More</span><i
+                                class="bi bi-arrow-right"></i></a> --}}
                     </div>
 
                     <div class="col-xl-7">
                         <div class="row gy-4 icon-boxes">
 
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                                <div class="icon-box">
-                                    <i class="bi bi-buildings"></i>
-                                    <h3>Eius provident</h3>
-                                    <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor
-                                        voluptatem</p>
-                                </div>
-                            </div> <!-- End Icon Box -->
-
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                                <div class="icon-box">
-                                    <i class="bi bi-clipboard-pulse"></i>
-                                    <h3>Rerum aperiam</h3>
-                                    <p>Autem saepe animi et aut aspernatur culpa facere. Rerum saepe rerum voluptates
-                                        quia</p>
-                                </div>
-                            </div> <!-- End Icon Box -->
-
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                                <div class="icon-box">
-                                    <i class="bi bi-command"></i>
-                                    <h3>Veniam omnis</h3>
-                                    <p>Omnis perferendis molestias culpa sed. Recusandae quas possimus. Quod consequatur
-                                        corrupti</p>
-                                </div>
-                            </div> <!-- End Icon Box -->
-
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                                <div class="icon-box">
-                                    <i class="bi bi-graph-up-arrow"></i>
-                                    <h3>Delares sapiente</h3>
-                                    <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis
-                                        quideme lorenda</p>
-                                </div>
-                            </div> <!-- End Icon Box -->
+                            @foreach ($aboutCard as $card)
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="icon-box">
+                                        {{-- <i class="bi bi-clipboard-pulse"></i> --}}
+                                        <i class="bi bi-{{ $card->icon }}"></i>
+                                        <h3>{{ $card->title }}</h3>
+                                        <p style="text-align: justify">{{ $card->description }}</p>
+                                    </div>
+                                </div> <!-- End Icon Box -->
+                            @endforeach
 
                         </div>
                     </div>
@@ -228,357 +212,66 @@
 
         <!-- Stats Section - Home Page -->
         <section id="stats" class="stats" text="center">
-
-            <img src="{{ asset('assets') }}/userHomepage/img/stats-bg.jpg" alt="" data-aos="fade-in">
+            <img src="{{ asset('uploads/dashboard/website/stats/background/' . $statBackgroundName) }}"
+                alt="" data-aos="fade-in">
 
             <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
                 <div class="row gy-4">
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="4000" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Hajj</p>
-                        </div>
-                    </div><!-- End Stats Item -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="4500" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Umrah</p>
-                        </div>
-                    </div><!-- End Stats Item -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="1453"
-                                data-purecounter-duration="1" class="purecounter"></span>
-                            <p>Hours Of Support</p>
-                        </div>
-                    </div><!-- End Stats Item -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Muallem</p>
-                        </div>
-                    </div><!-- End Stats Item -->
-
+                    @foreach ($stats as $stat)
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stats-item text-center w-100 h-100">
+                                <span data-purecounter-start="0" data-purecounter-end="{{ $stat->data }}"
+                                    data-purecounter-duration="1" class="purecounter"></span>
+                                <p>{{ $stat->topic }}</p>
+                            </div>
+                        </div><!-- End Stats Item -->
+                    @endforeach
                 </div>
-
             </div>
-
         </section><!-- End Stats Section -->
+
 
         <!-- Services Section - Home Page -->
         <section id="services" class="services">
 
             <!--  Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <h2>Travel Services</h2>
-                <p>We have always kept the motto “Our Customer satisfaction is the priority.”</p>
+                <h2>Services</h2>
+                <p style="color: #e84545; font-size: 20px">We have always kept the motto “Our Customer satisfaction is
+                    the priority.”</p>
             </div><!-- End Section Title -->
 
             <div class="container">
 
                 <div class="row gy-4">
 
-                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
-                            <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">Hajj</a></h4>
-                                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas
-                                    molestias excepturi sint occaecati cupiditate non provident</p>
+                    @foreach ($services as $service)
+                        <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
+                            <div class="service-item d-flex">
+                                <div class="icon flex-shrink-0"><i class="bi bi-{{ $service->icon }}"></i></div>
+                                <div>
+                                    <h4 class="title"><a class="stretched-link">{{ $service->title }}</a>
+                                    </h4>
+                                    <p class="description" style="text-align: justify">{{ $service->description }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- End Service Item -->
-
-                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
-                            <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">Umrah</a></h4>
-                                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex ea commodo consequat tarad limino ata</p>
-                            </div>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
-                            <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">- Helping Making Passports
-                                </a></h4>
-                                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur</p>
-                            </div>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="400">
-                        <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
-                            <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">International/Domestic Air Ticketing</a></h4>
-                                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                                    qui officia deserunt mollit anim id est laborum</p>
-                            </div>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="500">
-                        <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
-                            <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">- Inbound, Outbound Tour Packages</a></h4>
-                                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                    blanditiis praesentium voluptatum deleniti atque</p>
-                            </div>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
-                        <div class="service-item d-flex">
-                            <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
-                            <div>
-                                <h4 class="title"><a href="services-details.html" class="stretched-link">Visa Application Services</a></h4>
-                                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam
-                                    libero tempore, cum soluta nobis est eligendi</p>
-                            </div>
-                        </div>
-                    </div><!-- End Service Item -->
-
+                        <!-- End Service Item -->
+                    @endforeach
                 </div>
 
             </div>
 
         </section><!-- End Services Section -->
 
-        <!-- Features Section - Home Page -->
-        <section id="features" class="features">
-
-            <!--  Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Features</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-
-                <div class="row gy-4 align-items-center features-item">
-                    <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Corporis temporibus maiores provident</h3>
-                        <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident.
-                        </p>
-                        <a href="#" class="btn btn-get-started">Get Started</a>
-                    </div>
-                    <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out"
-                        data-aos-delay="100">
-                        <div class="image-stack">
-                            <img src="{{ asset('assets') }}/userHomepage/img/features-light-1.jpg" alt="" class="stack-front">
-                            <img src="{{ asset('assets') }}/userHomepage/img/features-light-2.jpg" alt="" class="stack-back">
-                        </div>
-                    </div>
-                </div><!-- Features Item -->
-
-                <div class="row gy-4 align-items-stretch justify-content-between features-item ">
-                    <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-                        <img src="{{ asset('assets') }}/userHomepage/img/features-light-3.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
-                        <h3>Sunt consequatur ad ut est nulla</h3>
-                        <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe
-                            odit aut quia voluptatem hic voluptas dolor doloremque.</p>
-                        <ul>
-                            <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.</span></li>
-                            <li><i class="bi bi-check"></i><span> Duis aute irure dolor in reprehenderit in voluptate
-                                    velit.</span></li>
-                            <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad
-                                    fugiat</span>.</li>
-                        </ul>
-                        <a href="#" class="btn btn-get-started align-self-start">Get Started</a>
-                    </div>
-                </div><!-- Features Item -->
-
-            </div>
-
-        </section><!-- End Features Section -->
-
-        <!-- Portfolio Section - Home Page -->
-        <section id="portfolio" class="portfolio">
-
-            <!--  Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Portfolio</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-
-                <div class="isotope-layout" data-default-filter="*" data-layout="masonry"
-                    data-sort="original-order">
-
-                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-                        <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-app">Hajj</li>
-                        <li data-filter=".filter-product">Umrah</li>
-                        <li data-filter=".filter-branding">Tour</li>
-                    </ul><!-- End Portfolio Filters -->
-
-                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid"
-                                alt="">
-                            <div class="portfolio-info">
-                                <h4>Kaba</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-1.jpg" title="Kaba"
-                                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid"
-                                alt="">
-                            <div class="portfolio-info">
-                                <h4>Kaba</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1"
-                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid"
-                                alt="">
-                            <div class="portfolio-info">
-                                <h4>Madina</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1"
-                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid"
-                                alt="">
-                            <div class="portfolio-info">
-                                <h4>Makka</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2"
-                                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid"
-                                alt="">
-                            <div class="portfolio-info">
-                                <h4>Passport</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2"
-                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid"
-                                alt="">
-                            <div class="portfolio-info">
-                                <h4>Gate</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2"
-                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid"
-                                alt="">
-                            <div class="portfolio-info">
-                                <h4>Pilgrims</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3"
-                                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid"
-                                alt="">
-                            <div class="portfolio-info">
-                                <h4>Pilgrims</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3"
-                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid"
-                                alt="">
-                            <div class="portfolio-info">
-                                <h4>Pilgrims</h4>
-                                <p>Lorem ipsum, dolor sit</p>
-                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2"
-                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                                        class="bi bi-zoom-in"></i></a>
-                                <a href="" title="More Details" class="details-link"><i
-                                        class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div><!-- End Portfolio Item -->
-
-                    </div><!-- End Portfolio Container -->
-
-                </div>
-
-            </div>
-
-        </section><!-- End Portfolio Section -->
-
         <!-- Pricing Section - Home Page -->
         <section id="pricing" class="pricing">
 
             <!--  Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <h2>Pricing</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                <h2>Package</h2>
+                {{-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> --}}
             </div><!-- End Section Title -->
 
             <div class="container" data-aos="zoom-in" data-aos-delay="100">
@@ -649,8 +342,218 @@
 
         </section><!-- End Pricing Section -->
 
+        <!-- Features Section - Home Page -->
+        <section id="features" class="features">
+
+            <!--  Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Features</h2>
+                {{-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> --}}
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-4 align-items-center features-item">
+                    <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                        <h3>{{ $feature1->title }}</h3>
+                        <p style="font-size: 20px; text-align: justify">{{ $feature1->description }}</p>
+                        {{-- <a href="#" class="btn btn-get-started">Get Started</a> --}}
+                    </div>
+                    <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out"
+                        data-aos-delay="100">
+                        <div class="image-stack">
+                            <img src="{{ asset('uploads/dashboard/website/features/' . $feature1->image1) }}"
+                                alt="" class="stack-front">
+
+                            <img src="{{ asset('uploads/dashboard/website/features/' . $feature1->image2) }}"
+                                alt="" class="stack-back">
+                        </div>
+                    </div>
+                </div><!-- Features Item -->
+
+                <div class="row gy-4 align-items-stretch justify-content-between features-item ">
+                    <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
+                        <img src="{{ asset('assets') }}/userHomepage/img/img1.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
+                        <h3>Quality Policy</h3>
+                        <p>We have the motto: “Customers satisfaction is the
+                            priority”. We care every step of the customers with:</p>
+                        <ul>
+                            <li><i class="bi bi-check"></i><span>Well-done tour arrangements.</span></li>
+                            <li><i class="bi bi-check"></i><span>Provision with the best services.</span></li>
+                            <li><i class="bi bi-check"></i><span>24/7 available for communication.</span></li>
+                            <li><i class="bi bi-check"></i><span>Quick responses to all urgent situations.</span></li>
+                        </ul>
+                        {{-- <a href="#" class="btn btn-get-started align-self-start">Get Started</a> --}}
+                    </div>
+                </div><!-- Features Item -->
+
+            </div>
+
+        </section><!-- End Features Section -->
+
+        <!-- Portfolio Section - Home Page -->
+        <section id="portfolio" class="portfolio">
+
+            <!--  Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Portfolio</h2>
+                {{-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> --}}
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="isotope-layout" data-default-filter="*" data-layout="masonry"
+                    data-sort="original-order">
+
+                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-app">Hajj</li>
+                        <li data-filter=".filter-product">Umrah</li>
+                        <li data-filter=".filter-branding">Tour</li>
+                    </ul><!-- End Portfolio Filters -->
+
+                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-1.jpg"
+                                class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Kaba</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-1.jpg"
+                                    title="Kaba" data-gallery="portfolio-gallery-app"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-2.jpg"
+                                class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Kaba</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-2.jpg"
+                                    title="Product 1" data-gallery="portfolio-gallery-product"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-3.jpg"
+                                class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Madina</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-3.jpg"
+                                    title="Branding 1" data-gallery="portfolio-gallery-branding"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-4.jpg"
+                                class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Makka</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-4.jpg"
+                                    title="App 2" data-gallery="portfolio-gallery-app"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-5.jpg"
+                                class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Passport</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-5.jpg"
+                                    title="Product 2" data-gallery="portfolio-gallery-product"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-6.jpg"
+                                class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Gate</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-6.jpg"
+                                    title="Branding 2" data-gallery="portfolio-gallery-branding"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-7.jpg"
+                                class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Pilgrims</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-7.jpg"
+                                    title="App 3" data-gallery="portfolio-gallery-app"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-8.jpg"
+                                class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Pilgrims</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-8.jpg"
+                                    title="Product 3" data-gallery="portfolio-gallery-product"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-9.jpg"
+                                class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Pilgrims</h4>
+                                <p>Lorem ipsum, dolor sit</p>
+                                <a href="{{ asset('assets') }}/userHomepage/img/masonry-portfolio/masonry-portfolio-9.jpg"
+                                    title="Branding 2" data-gallery="portfolio-gallery-branding"
+                                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                    </div><!-- End Portfolio Container -->
+
+                </div>
+
+            </div>
+
+        </section><!-- End Portfolio Section -->
+
+
+
         <!-- Faq Section - Home Page -->
-        <section id="faq" class="faq">
+        {{-- <section id="faq" class="faq">
 
             <div class="container">
 
@@ -736,7 +639,7 @@
 
             </div>
 
-        </section><!-- End Faq Section -->
+        </section><!-- End Faq Section --> --}}
 
         <!-- Team Section - Home Page -->
         <section id="team" class="team">
@@ -744,7 +647,7 @@
             <!--  Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Team</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                {{-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> --}}
             </div><!-- End Section Title -->
 
             <div class="container">
@@ -753,10 +656,11 @@
 
                     <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
                         <div class="member-img">
-                            <img src="{{ asset('assets') }}/userHomepage/img/team/team-1.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('assets') }}/userHomepage/img/team/team-1.jpg" class="img-fluid"
+                                alt="">
                             <div class="social">
-                                <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
@@ -764,17 +668,18 @@
                         <div class="member-info text-center">
                             <h4>Abdus Sattar</h4>
                             <span>Founder</span>
-                            <p>Aliquam iure quaerat voluptatem praesentium possimus unde laudantium vel dolorum
-                                distinctio dire flow</p>
+                            {{-- <p>Aliquam iure quaerat voluptatem praesentium possimus unde laudantium vel dolorum
+                                distinctio dire flow</p> --}}
                         </div>
                     </div><!-- End Team Member -->
 
                     <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
                         <div class="member-img">
-                            <img src="{{ asset('assets') }}/userHomepage/img/team/team-2.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('assets') }}/userHomepage/img/team/team-2.jpg" class="img-fluid"
+                                alt="">
                             <div class="social">
-                                <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
@@ -782,17 +687,18 @@
                         <div class="member-info text-center">
                             <h4>Md Abdul Zabbar</h4>
                             <span>Proprietor</span>
-                            <p>Labore ipsam sit consequatur exercitationem rerum laboriosam laudantium aut quod dolores
-                                exercitationem ut</p>
+                            {{-- <p>Labore ipsam sit consequatur exercitationem rerum laboriosam laudantium aut quod dolores
+                                exercitationem ut</p> --}}
                         </div>
                     </div><!-- End Team Member -->
 
                     <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
                         <div class="member-img">
-                            <img src="{{ asset('assets') }}/userHomepage/img/team/team-3.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('assets') }}/userHomepage/img/team/team-3.jpg" class="img-fluid"
+                                alt="">
                             <div class="social">
-                                <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
                                 <a href="#"><i class="bi bi-instagram"></i></a>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
@@ -800,65 +706,10 @@
                         <div class="member-info text-center">
                             <h4>Abdul Ajij</h4>
                             <span>Managing Director</span>
-                            <p>Illum minima ea autem doloremque ipsum quidem quas aspernatur modi ut praesentium vel
-                                tque sed facilis at qui</p>
+                            {{-- <p>Illum minima ea autem doloremque ipsum quidem quas aspernatur modi ut praesentium vel
+                                tque sed facilis at qui</p> --}}
                         </div>
                     </div><!-- End Team Member -->
-
-                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
-                        <div class="member-img">
-                            <img src="{{ asset('assets') }}/userHomepage/img/team/team-4.jpg" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href="#"><i class="bi bi-twitter"></i></a>
-                                <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
-                                <a href="#"><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info text-center">
-                            <h4>Md Shoriful Islam</h4>
-                            <span>Director</span>
-                            <p>Magni voluptatem accusamus assumenda cum nisi aut qui dolorem voluptate sed et veniam
-                                quasi quam consectetur</p>
-                        </div>
-                    </div><!-- End Team Member -->
-
-                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
-                        <div class="member-img">
-                            <img src="{{ asset('assets') }}/userHomepage/img/team/team-5.jpg" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href="#"><i class="bi bi-twitter"></i></a>
-                                <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
-                                <a href="#"><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info text-center">
-                            <h4>It_Officer_Name</h4>
-                            <span>It Officer</span>
-                            <p>Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus
-                                quia impedit laborum velit</p>
-                        </div>
-                    </div><!-- End Team Member -->
-
-                    <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
-                        <div class="member-img">
-                            <img src="{{ asset('assets') }}/userHomepage/img/team/team-6.jpg" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href="#"><i class="bi bi-twitter"></i></a>
-                                <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
-                                <a href="#"><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info text-center">
-                            <h4>Mahmudul Hasan Manik</h4>
-                            <span>Accountant</span>
-                            <p>Sint sint eveniet explicabo amet consequatur nesciunt error enim rerum earum et omnis
-                                fugit eligendi cupiditate vel</p>
-                        </div>
-                    </div><!-- End Team Member -->
-
                 </div>
 
             </div>
@@ -1060,7 +911,7 @@
 
         </section><!-- End Testimonials Section --> --}}
 
-        <!-- Recent-posts Section - Home Page -->
+        {{-- <!-- Recent-posts Section - Home Page -->
         <section id="recent-posts" class="recent-posts">
 
             <!--  Section Title -->
@@ -1077,7 +928,8 @@
                         <article>
 
                             <div class="post-img">
-                                <img src="{{ asset('assets') }}/userHomepage/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                                <img src="{{ asset('assets') }}/userHomepage/img/blog/blog-1.jpg" alt=""
+                                    class="img-fluid">
                             </div>
 
                             <p class="post-category">Politics</p>
@@ -1104,7 +956,8 @@
                         <article>
 
                             <div class="post-img">
-                                <img src="{{ asset('assets') }}/userHomepage/img/blog/blog-2.jpg" alt="" class="img-fluid">
+                                <img src="{{ asset('assets') }}/userHomepage/img/blog/blog-2.jpg" alt=""
+                                    class="img-fluid">
                             </div>
 
                             <p class="post-category">Sports</p>
@@ -1114,8 +967,8 @@
                             </h2>
 
                             <div class="d-flex align-items-center">
-                                <img src="{{ asset('assets') }}/userHomepage/img/blog/blog-author-2.jpg" alt=""
-                                    class="img-fluid post-author-img flex-shrink-0">
+                                <img src="{{ asset('assets') }}/userHomepage/img/blog/blog-author-2.jpg"
+                                    alt="" class="img-fluid post-author-img flex-shrink-0">
                                 <div class="post-meta">
                                     <p class="post-author">Allisa Mayer</p>
                                     <p class="post-date">
@@ -1131,7 +984,8 @@
                         <article>
 
                             <div class="post-img">
-                                <img src="{{ asset('assets') }}/userHomepage/img/blog/blog-3.jpg" alt="" class="img-fluid">
+                                <img src="{{ asset('assets') }}/userHomepage/img/blog/blog-3.jpg" alt=""
+                                    class="img-fluid">
                             </div>
 
                             <p class="post-category">Entertainment</p>
@@ -1142,8 +996,8 @@
                             </h2>
 
                             <div class="d-flex align-items-center">
-                                <img src="{{ asset('assets') }}/userHomepage/img/blog/blog-author-3.jpg" alt=""
-                                    class="img-fluid post-author-img flex-shrink-0">
+                                <img src="{{ asset('assets') }}/userHomepage/img/blog/blog-author-3.jpg"
+                                    alt="" class="img-fluid post-author-img flex-shrink-0">
                                 <div class="post-meta">
                                     <p class="post-author">Mark Dower</p>
                                     <p class="post-date">
@@ -1159,7 +1013,7 @@
 
             </div>
 
-        </section><!-- End Recent-posts Section -->
+        </section><!-- End Recent-posts Section --> --}}
 
         <!-- Contact Section - Home Page -->
         <section id="contact" class="contact">
@@ -1167,7 +1021,7 @@
             <!--  Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Contact</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                {{-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> --}}
             </div><!-- End Section Title -->
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -1209,8 +1063,8 @@
                                 <div class="info-item" data-aos="fade" data-aos-delay="500">
                                     <i class="bi bi-clock"></i>
                                     <h3>Open Hours</h3>
-                                    <p>Monday - Friday</p>
-                                    <p>9:00AM - 05:00PM</p>
+                                    <p>Sunday - Thursday</p>
+                                    <p>9:00AM - 09:00PM</p>
                                 </div>
                             </div><!-- End Info Item -->
 
@@ -1268,11 +1122,12 @@
         <div class="container footer-top">
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-12 footer-about">
-                    <a href="{{ route("user.homepage") }}" class="logo d-flex align-items-center">
-                        <span><span style="color:red;">RAJ</span> TRAVELS</span>
+                    <a href="{{ route('user.homepage') }}" class="logo d-flex align-items-center">
+                        <span><span style="color:#e84545;">RAJ</span> TRAVELS</span>
                     </a>
-                    <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita
-                        valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+                    <p>We have always kept the motto “Our Customer satisfaction is the priority.” Apart from satisfying
+                        our clients, M/S RAJ TRAVELS is committed to give all the efforts, to make the travel better.
+                    </p>
                     <div class="social-links d-flex mt-4">
                         <a href=""><i class="bi bi-twitter"></i></a>
                         <a href=""><i class="bi bi-facebook"></i></a>
@@ -1284,23 +1139,26 @@
                 <div class="col-lg-2 col-6 footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Terms of service</a></li>
-                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Portfolio</a></li>
+                        <li><a href="">Team</a></li>
+                        <li><a href="">Contact</a></li>
+                        {{-- <li><a href="">Terms of service</a></li>
+                        <li><a href="">Privacy policy</a></li> --}}
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-6 footer-links">
                     <h4>Our Services</h4>
                     <ul>
-                        <li><a href="#">Hajj</a></li>
-                        <li><a href="#">Umrah</a></li>
-                        <li><a href="#">Visa</a></li>
-                        <li><a href="#">Tour</a></li>
-                        <li><a href="#">Passport</a></li>
-                        <li><a href="#">Hotel</a></li>
+                        <li><a href="">Hajj</a></li>
+                        <li><a href="">Umrah</a></li>
+                        <li><a href="">Visa</a></li>
+                        <li><a href="">Tour</a></li>
+                        <li><a href="">Passport</a></li>
+                        <li><a href="">Hotel</a></li>
                     </ul>
                 </div>
 
@@ -1316,15 +1174,22 @@
             </div>
         </div>
 
+        <p class="text-muted text-center text-md-left"></p>
+
+
+
+
         <div class="container copyright text-center mt-4">
-            <p>&copy; <span>Copyright</span> <strong class="px-1">RAJ TRAVELS</strong> <span>All Rights Reserved</span>
+            <p>The entirety of this site is protected by copyright © 2024. <a
+                        href="https://msrajtravels.com" target="_blank">RAJ TRAVLES</a>
             </p>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
                 <!-- You can delete the links only if you've purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                Developed by <a href="https://facebook.com/sehabkhanzehad">Zehad</a>
+                <p>Developed by <a target="_blank" href="https://sehabkhanzehad.dev"><strong>Sk Zehad</strong></a> <i
+                    class="mb-1 ml-1 bi bi-heart"></i></p>
             </div>
         </div>
 
@@ -1355,22 +1220,22 @@
     <script src="{{ asset('assets') }}/userHomepage/js/main.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          document.querySelectorAll('.nav-link').forEach(function (link) {
-            link.addEventListener('click', function (event) {
-              event.preventDefault();
-              const targetId = this.getAttribute('data-target');
-              const targetElement = document.querySelector(targetId);
-              if (targetElement) {
-                window.scrollTo({
-                  top: targetElement.offsetTop,
-                  behavior: 'smooth'
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-link').forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('data-target');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
                 });
-              }
             });
-          });
         });
-      </script>
+    </script>
 
 
 </body>

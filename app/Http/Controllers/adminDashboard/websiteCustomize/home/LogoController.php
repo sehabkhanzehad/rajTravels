@@ -35,8 +35,9 @@ class LogoController extends Controller
         );
 
         $totalLogo = DB::table("website_logos")->count();
-        if ($totalLogo == 3) {
-            return back()->with("warning", "Maximum 3 logo can be added.");
+
+        if ($totalLogo == 5) {
+            return back()->with("warning", "Maximum 5 logo can be added.");
         } else {
 
             $logo = $request->file("logo");
@@ -70,6 +71,8 @@ class LogoController extends Controller
             return back()->with("warning", "Active logo can't be deleted.");
         } else {
             DB::table("website_logos")->where("id", $id)->delete();
+            unlink(public_path("uploads/dashboard/website/home/logo/" . $logo->logo));
+
             return back()->with("success", "Logo deleted successfully.");
         }
     }

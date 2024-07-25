@@ -4,8 +4,15 @@ use App\Http\Controllers\adminDashboard\admin\AdminDashboardController;
 use App\Http\Controllers\adminDashboard\admin\AdminProfileEditController;
 use App\Http\Controllers\adminDashboard\admin\AdminSignInController;
 use App\Http\Controllers\adminDashboard\admin\AdminSignOutController;
+use App\Http\Controllers\adminDashboard\pilgrims\PilgrimController;
+use App\Http\Controllers\adminDashboard\websiteCustomize\aboutUs\AboutCardController;
+use App\Http\Controllers\adminDashboard\websiteCustomize\aboutUs\AboutUsController;
+use App\Http\Controllers\adminDashboard\websiteCustomize\features\FeaturesOneConrtoller;
 use App\Http\Controllers\adminDashboard\websiteCustomize\home\BannerController;
 use App\Http\Controllers\adminDashboard\websiteCustomize\home\LogoController;
+use App\Http\Controllers\adminDashboard\websiteCustomize\service\ServiceController;
+use App\Http\Controllers\adminDashboard\websiteCustomize\stats\StatController;
+use App\Http\Controllers\adminDashboard\websiteCustomize\team\TeamController;
 use App\Http\Controllers\userHomepage\HomepageControoller;
 use App\Models\Admin;
 use Illuminate\Http\Request;
@@ -63,6 +70,18 @@ Route::prefix('admin')->group(function () {
 
 });
 
+// Pilgrims
+
+Route::middleware(["admin"])->group(function () {
+    Route::prefix("pilgrims")->group(function () {
+        Route::get("/", [PilgrimController::class, "index"])->name("pilgrims");
+
+
+    });
+});
+
+
+
 // Website customize
 Route::middleware(["admin"])->group(function () {
     Route::prefix("website/customize")->group(function () {
@@ -72,8 +91,20 @@ Route::middleware(["admin"])->group(function () {
         Route::get("/logo/delete/{id}", [LogoController::class,"logoDelete"])->name("websiteCustomize.logo.delete");
 
         // use resource controller
-        Route::resource('/banners', BannerController::class);
-        // Route::get('banners', [BannerController::class, 'index'])->name('banners.index');
+        Route::resource('/banner', BannerController::class);
+        Route::resource('/aboutus', AboutUsController::class);
+        Route::resource("/about/card", AboutCardController::class);
+        Route::resource("/stats", StatController::class);
+        Route::post("/stats", [StatController::class, "store"])->name("stats.store");
+        Route::post("/stats/background", [StatController::class, "background"])->name("stats.background");
+        Route::resource('service', ServiceController::class);
+        Route::resource("/feature1", FeaturesOneConrtoller::class);
+        Route::post("/feature1", [FeaturesOneConrtoller::class, "titleDescription"])->name("feature1.titelDescription");
+        Route::post("/feature1/image1", [FeaturesOneConrtoller::class, "image1"])->name("feature1.image1");
+        Route::post("/feature1/image2", [FeaturesOneConrtoller::class, "image2"])->name("feature1.image2");
+        Route::resource("/team", TeamController::class);
+
+
 
 
 
