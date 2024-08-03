@@ -132,47 +132,7 @@
 
         </section><!-- End Hero Section -->
 
-        <!-- Clients Section - Home Page -->
-        <section id="clients" class="clients">
-
-            <div class="container-fluid" data-aos="fade-up">
-
-                <div class="row gy-4">
-
-                    <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets') }}/userHomepage/img/clients/bdGov.png" class="img-fluid"
-                            alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets') }}/userHomepage/img/clients/atab.jpg" class="img-fluid"
-                            alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets') }}/userHomepage/img/clients/bdBank.png" class="img-fluid"
-                            alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets') }}/userHomepage/img/clients/rupali.png" class="img-fluid"
-                            alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets') }}/userHomepage/img/clients/iata.png" class="img-fluid"
-                            alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-2 col-md-3 col-6 client-logo">
-                        <img src="{{ asset('assets') }}/userHomepage/img/clients/haab.jpg" class="img-fluid"
-                            alt="">
-                    </div><!-- End Client Item -->
-                </div>
-
-            </div>
-
-        </section><!-- End Clients Section -->
+       
 
         <!-- About Section - Home Page -->
         <section id="about" class="about">
@@ -1113,6 +1073,48 @@
             </div>
 
         </section><!-- End Contact Section -->
+
+         <!-- Clients Section - Home Page -->
+         <section id="clients" class="clients">
+
+<div class="container-fluid" data-aos="fade-up">
+
+    <div class="row gy-4">
+
+        <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('assets') }}/userHomepage/img/clients/bdGov.png" class="img-fluid"
+                alt="">
+        </div><!-- End Client Item -->
+
+        <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('assets') }}/userHomepage/img/clients/atab.jpg" class="img-fluid"
+                alt="">
+        </div><!-- End Client Item -->
+
+        <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('assets') }}/userHomepage/img/clients/bdBank.png" class="img-fluid"
+                alt="">
+        </div><!-- End Client Item -->
+
+        <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('assets') }}/userHomepage/img/clients/rupali.png" class="img-fluid"
+                alt="">
+        </div><!-- End Client Item -->
+
+        <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('assets') }}/userHomepage/img/clients/iata.png" class="img-fluid"
+                alt="">
+        </div><!-- End Client Item -->
+
+        <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('assets') }}/userHomepage/img/clients/haab.jpg" class="img-fluid"
+                alt="">
+        </div><!-- End Client Item -->
+    </div>
+
+</div>
+
+</section><!-- End Clients Section -->
 
     </main>
 
