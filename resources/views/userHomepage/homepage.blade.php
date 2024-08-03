@@ -1082,34 +1082,34 @@
             <div class="row gy-4">
 
                 <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="{{ asset('assets') }}/userHomepage/img/clients/bdGov.png" class="img-fluid"
-                        alt="">
+                   <a target="_blank" href="https://hajj.gov.bd/"><img src="{{ asset('assets') }}/userHomepage/img/clients/bdGov.png" class="img-fluid"
+                   alt="Hajj"></a>
                 </div><!-- End Client Item -->
 
                 <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="{{ asset('assets') }}/userHomepage/img/clients/haab.jpg" class="img-fluid"
-                        alt="">
+                    <a target="_blank" href="https://haabbd.com/"><img src="{{ asset('assets') }}/userHomepage/img/clients/haab.jpg" class="img-fluid"
+                    alt="Haab"></a>
                 </div><!-- End Client Item -->
 
                 <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="{{ asset('assets') }}/userHomepage/img/clients/atab.jpg" class="img-fluid"
-                        alt="">
+                <a target="_blank" href="https://www.atab.org.bd/"><img src="{{ asset('assets') }}/userHomepage/img/clients/atab.jpg" class="img-fluid"
+                alt="Atab"></a>
                 </div><!-- End Client Item -->
 
                 <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="{{ asset('assets') }}/userHomepage/img/clients/iata.png" class="img-fluid"
-                        alt="">
+                <a target="_blank" href="https://www.iata.org/"><img src="{{ asset('assets') }}/userHomepage/img/clients/iata.png" class="img-fluid"
+                alt="IATA"></a>
                 </div><!-- End Client Item -->
 
                 <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="{{ asset('assets') }}/userHomepage/img/clients/nusuk.jpg" class="img-fluid"
-                        alt="">
+                <a target="_blank" href="https://www.nusuk.sa/"><img src="{{ asset('assets') }}/userHomepage/img/clients/nusuk.jpg" class="img-fluid"
+                alt="Nusuk"></a>
                 </div>
                 <!-- End Client Item -->
 
                 <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="{{ asset('assets') }}/userHomepage/img/clients/bd_biman.png" class="img-fluid"
-                        alt="">
+                <a target="_blank" href="https://www.biman-airlines.com/"> <img src="{{ asset('assets') }}/userHomepage/img/clients/bd_biman.png" class="img-fluid"
+                alt="Biman Airlines"></a>
                 </div>
                 <!-- End Client Item -->
             
