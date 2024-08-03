@@ -1087,17 +1087,12 @@
         </div><!-- End Client Item -->
 
         <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('assets') }}/userHomepage/img/clients/haab.jpg" class="img-fluid"
+                alt="">
+        </div><!-- End Client Item -->
+
+        <div class="col-xl-2 col-md-3 col-6 client-logo">
             <img src="{{ asset('assets') }}/userHomepage/img/clients/atab.jpg" class="img-fluid"
-                alt="">
-        </div><!-- End Client Item -->
-
-        <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="{{ asset('assets') }}/userHomepage/img/clients/bdBank.png" class="img-fluid"
-                alt="">
-        </div><!-- End Client Item -->
-
-        <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="{{ asset('assets') }}/userHomepage/img/clients/rupali.png" class="img-fluid"
                 alt="">
         </div><!-- End Client Item -->
 
@@ -1106,10 +1101,21 @@
                 alt="">
         </div><!-- End Client Item -->
 
-        <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="{{ asset('assets') }}/userHomepage/img/clients/haab.jpg" class="img-fluid"
+        <!-- <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('assets') }}/userHomepage/img/clients/bdBank.png" class="img-fluid"
                 alt="">
-        </div><!-- End Client Item -->
+        </div> -->
+        <!-- End Client Item -->
+
+        <!-- <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('assets') }}/userHomepage/img/clients/rupali.png" class="img-fluid"
+                alt="">
+        </div> -->
+        <!-- End Client Item -->
+
+       
+
+       
     </div>
 
 </div>
