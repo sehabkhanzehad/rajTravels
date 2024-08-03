@@ -60,7 +60,7 @@
                         <div class="collapse" id="pilgrims">
                             <ul class="nav sub-menu">
                                 <li class="nav-item">
-                                    <a href="{{ route("pilgrims") }}" class="nav-link">All Pilgrims</a>
+                                    <a href="" class="nav-link">All Pilgrims</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="" class="nav-link">2024</a>
