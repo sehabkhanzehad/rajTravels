@@ -60,7 +60,7 @@
                         <div class="collapse" id="pilgrims">
                             <ul class="nav sub-menu">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">All Pilgrims</a>
+                                    <a href="{{ route("pilgrims") }}" class="nav-link">All Pilgrims</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="" class="nav-link">2024</a>
@@ -84,7 +84,7 @@
                                     <a href="{{ route("websiteCustomize.logo") }}" class="nav-link">Logo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">Banner</a>
+                                    <a href="{{ route("banner.index") }}" class="nav-link">Banner</a>
                                 </li>
 
                             </ul>
