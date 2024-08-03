@@ -1005,8 +1005,8 @@
                                     <i class="bi bi-telephone"></i>
                                     <h3>Call Us</h3>
                                     <p>+880 1799 745020</p>
-                                    <p>02 588892032</p>
-                                    <p>xxxx xxxxx xxxxx</p>
+                                    <p>+880 2588 892032</p>
+                                    <p>+966 57 827 4704</p>
                                 </div>
                             </div><!-- End Info Item -->
 
@@ -1134,10 +1134,11 @@
                         our clients, M/S RAJ TRAVELS is committed to give all the efforts, to make the travel better.
                     </p>
                     <div class="social-links d-flex mt-4">
-                        <a href=""><i class="bi bi-twitter"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/RajTravels.official"><i class="bi bi-facebook"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/abdulajij.cb/"><i class="bi bi-instagram"></i></a>
+                        <a target="_blank" href="https://wa.me/+8801799745020"><i class="bi bi-whatsapp"></i></a>
+                        <a target="_blank" href=""><i class="bi bi-twitter"></i></a>
+                        <a target="_blank" href=""><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
 
@@ -1172,7 +1173,7 @@
                     <p>189/1, Nayagola, Nayagola Hat-6300,</p>
                     <p>Chapainawabganj, Rajshahi,</p>
                     <p>Dhaka, Bangladesh.</p>
-                    <p class="mt-4"><strong>Phone:</strong> <span>+880 1799 745020</span></p>
+                    <p class="mt-4"><strong>Phone:</strong> <span>+880 1970 990935</span></p>
                     <p><strong>Email:</strong> <span>rajtravels.bd@gmail.com</span></p>
                 </div>
 
