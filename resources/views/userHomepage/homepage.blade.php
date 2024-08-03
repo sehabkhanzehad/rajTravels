@@ -619,10 +619,9 @@
                             <img src="{{ asset('assets') }}/userHomepage/img/team/team-1.jpg" class="img-fluid"
                                 alt="">
                             <div class="social">
-                                <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-twitter"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
-                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a target="_blank" href=""><i class="bi bi-facebook"></i></a>
+                                <a target="_blank" href=""><i class="bi bi-instagram"></i></a>
+                                <a target="_blank" href="https://wa.me/+8801761788306"><i class="bi bi-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="member-info text-center">
@@ -637,11 +636,10 @@
                         <div class="member-img">
                             <img src="{{ asset('assets') }}/userHomepage/img/team/team-2.jpg" class="img-fluid"
                                 alt="">
-                            <div class="social">
-                                <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-twitter"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
-                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <div class="social">
+                                <a target="_blank" href="https://www.facebook.com/profile.php?id=61550204040888"><i class="bi bi-facebook"></i></a>
+                                <a target="_blank" href=""><i class="bi bi-instagram"></i></a>
+                                <a target="_blank" href="https://wa.me/+8801733111463"><i class="bi bi-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="member-info text-center">
@@ -657,10 +655,9 @@
                             <img src="{{ asset('assets') }}/userHomepage/img/team/team-3.jpg" class="img-fluid"
                                 alt="">
                             <div class="social">
-                                <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-twitter"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
-                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a target="_blank" href="https://www.facebook.com/abdulajij.cb1"><i class="bi bi-facebook"></i></a>
+                                <a target="_blank" href="https://www.instagram.com/abdulajij.cb/"><i class="bi bi-instagram"></i></a>
+                                <a target="_blank" href="https://wa.me/+8801799745020"><i class="bi bi-whatsapp"></i></a>
                             </div>
                         </div>
                         <div class="member-info text-center">
