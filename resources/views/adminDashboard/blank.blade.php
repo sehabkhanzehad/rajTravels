@@ -84,7 +84,7 @@
                                     <a href="{{ route("websiteCustomize.logo") }}" class="nav-link">Logo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route("banner.index") }}" class="nav-link">Banner</a>
+                                    <a href="" class="nav-link">Banner</a>
                                 </li>
 
                             </ul>
